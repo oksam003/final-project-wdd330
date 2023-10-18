@@ -12,7 +12,7 @@
     "test": "jest"
   },
   "keywords": [],
-  "author": "Samuel Okooai",
+  "author": "Samuel O. Okooai",
   "license": "ISC",
   "dependencies": {
     "vite": "^4.3.9"
