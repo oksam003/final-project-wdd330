@@ -1,0 +1,752 @@
+html {
+  font-size: 1rem;
+  box-sizing: border-box;
+}
+body {
+  width: 98%;
+  height: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.wrapper{
+  box-shadow: 1px 3px 10px #122424;
+}
+
+/*Header, footer*/
+header, #main-footer {
+  display: flex;
+  background-color: #368887;
+  box-shadow: 1px 3px 10px #368887;
+  color: white;
+  align-items: center;  
+  margin-bottom: 1rem;  
+}
+
+header picture {
+  margin-left: 1rem;
+  margin-top: .5rem;
+  margin-right: 1rem;
+}
+
+.headings {
+  display: flex;
+  flex-direction: column;
+  font-size: .8em;
+}
+
+.headings h1{
+  margin-bottom: 0;
+  margin-top: 0;
+  font-size: 56px;
+  font-family: 'Ysabeau SC', serif;
+}
+
+.headings p{
+  margin-top: 0;
+  font-family: 'Klee One', sans-serif;
+  margin-bottom: 1.8rem;
+  
+}
+
+#main-footer a{
+  color: white;
+  max-height: 50px;
+  margin-left: .5rem;
+  font-family: 'Klee One', sans-serif;
+  text-decoration: none;
+}
+
+.footerlogo{
+  margin-left: 1rem;
+}
+
+#loading-spinner{
+  width: 40px;
+  height: 40px;
+  border: 4px solid #f3f3f3;
+  border-top: 4px solid #368887;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin-left: auto;
+  margin-right: auto;
+  transform: translate(-50%, -50%);
+}
+
+#loading-spinner img{
+  max-width: 60%;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.hidden-spinner{
+  display: none;
+}
+
+
+@media (max-width: 410px) {
+  header, #main-footer {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding-bottom: .7rem;
+  }
+  .headings {
+      margin-top: 0;
+      text-align: center;        
+  }
+  .headings h1{
+    margin-top: 0;
+    margin-bottom: .5rem;
+  }
+
+
+}
+
+/*Navigation*/
+nav {
+  display: flex;
+  flex-direction: column;
+  background-color: #368887;
+  border-radius: 50px;
+  box-shadow: 1px 3px 10px #368887;
+  max-width: 85%;
+  margin: 0 auto; 
+}
+
+nav ul{
+  list-style-type: none;
+  font-family: 'Ysabeau SC', serif;
+  margin-bottom: 1.5rem;
+}
+
+nav button {
+  margin-top: .7rem;
+  margin-bottom: .7rem;
+  background: transparent;
+  border: none;
+  font-size: 2rem;
+  color: #fff;
+}
+
+nav ul li a {
+  display: block;
+  padding-bottom: 1rem;
+  text-decoration: none;
+  color: #fff;
+  font-size: 1.6rem;
+  text-decoration: underline;
+}
+
+nav ul {
+  display: none;
+}
+
+nav ul.open {
+  display: block;
+}
+
+#hamburgerBtn.open{
+  font-size: 1.6rem;
+  text-decoration: underline;
+  padding: .8rem;
+}
+
+#hamburgerBtn span:nth-child(1) {
+  display: block;
+}
+#hamburgerBtn span:nth-child(2) {
+  display: none;
+}
+#hamburgerBtn.open span:nth-child(1) {
+  display: none;
+}
+#hamburgerBtn.open span:nth-child(2) {
+  display: block;
+  margin-left: 1rem;
+}
+
+/*end nav styles */
+
+.page-title{
+  text-align: center;
+  font-family: 'Ysabeau SC', serif;
+  font-style: italic;
+  color: #0d280d;
+  margin-top: 2rem;
+  margin-bottom: .2rem;
+}
+hr{
+  width: 50%;
+  margin-bottom: 2rem;
+}
+h2{
+    text-align: center;
+    font-size: 2rem;
+}
+
+/*hero*/
+.hero {
+  position: relative;
+}
+
+.heropic{
+  box-shadow: 1px 3px 10px #368887;
+  width: 100%; 
+  height: 100%;  
+}
+
+.hero-text{
+  background-color: #368887;
+  box-shadow: 1px 3px 10px #368887;
+  width: fit-content;
+  padding: .5rem;
+  border-radius: 80px;
+  position: absolute;
+  top: 10px;
+  left: 5px;
+}
+
+.hero-text a{
+  color: white;
+  text-decoration: none;
+  font-family: 'Ysabeau SC', serif;
+  font-size: 18px;
+}
+
+.page-para{
+  font-family: 'Klee One', sans-serif;
+  border: #368887 solid 1px;
+  box-shadow: 1px 3px 10px #368887;
+  padding: 1rem;
+  font-size: 18px
+}
+
+/*slider*/
+#image-slider{
+  margin-bottom: .6rem;
+}
+.slider{
+    position: relative;
+    max-width: 40rem; 
+    height: 26.625rem; 
+    margin: 0 auto;
+    overflow: hidden;
+    box-shadow: 1px 3px 10px #368887;
+}
+.slide{ 
+    position: absolute;
+    top:0;
+    width: 100%;
+    height: 26.625rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 1s;
+}
+.slide > img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+button{
+    background: none;
+    border: none;
+}
+button .fas{
+    color: rgba(255, 255, 255, .5);
+}
+.btn-slide{
+    position:absolute;
+    top:50%;
+    z-index: 10;
+
+    height: 5.5rem;
+    width: 5.5rem;
+    cursor: pointer;
+}
+.prev{
+    left:3rem;
+    transform: translate(-50%, -50%);
+}
+.next{
+    right: 3rem;
+    transform: translate(50%, -50%); 
+}
+.dots-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.dot{
+    width: 25px;
+    height: 5px;
+    margin: 15px 5px;
+    border-radius: .5rem;
+    background: rgba(39,39,39, .5);
+    cursor: pointer;
+}
+.dot.active{
+background:#272727;
+}
+
+.fade-transition {
+  transition: opacity 500ms ease-in-out;
+  opacity: 0;
+}
+
+.fade-transition.active {
+  opacity: 1;
+}
+/*end slider*/
+.image-quote{
+  font-family: 'Cedarville Cursive', sans-serif;
+  text-align: center;
+}
+#bird-facts{
+  text-align: center;
+  box-shadow: 1px 3px 10px #368887;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 2rem;
+  padding-top: .5rem;
+  padding-bottom: .5rem;
+}
+
+#bird-facts h2{
+  line-height: 2.6rem;
+  font-family: 'Ysabeau SC', serif;
+}
+
+#birdListContainer {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+#bird-facts p{
+  font-family: 'Klee One', sans-serif;
+}
+
+/*Birds List Page*/
+.locationBtn{
+  display: none;
+}
+
+#zip-entry{
+  font-family: 'Klee One', sans-serif;
+  margin-bottom: 1.5rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  text-align: center;
+}
+
+#zipcodeForm label:nth-child(3){
+  margin-left: .3rem;
+}
+
+#zipcodeForm input:nth-child(5){
+  margin-right: .3rem;
+  margin-left: .3rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  width: 3rem;
+}
+
+.submitBtn{
+  padding: 1.2rem;
+  background-color: #368887;
+  box-shadow: 1px 3px 10px #368887;
+  color: #fff;
+  border: none;
+  border-radius: 90px;
+  font-size: 18px;
+  font-family: 'Ysabeau SC', sans-serif;
+  font-weight: bold;
+}
+
+.submitBtn:hover{
+  font-style: italic;
+  background-color: #48d109;
+}
+.zip-divider{
+  width: 95%;
+}
+
+#birdListContainer{
+  padding-left: .7rem;
+  padding-right: .7rem;
+}
+#birdListContainer h2{
+  font-family: 'Ysabeau SC', serif;  
+}
+
+#birdListContainer p{
+  font-family: 'Klee One', sans-serif;
+}
+
+/*Bird Journal*/
+.journal-main{
+  text-align: center;
+}
+
+#observationForm label, input{
+  margin-bottom: 1rem;
+}
+
+#observationForm label{
+  font-family: 'Klee One', sans-serif;
+}
+#observationForm input{
+  margin-left: .3rem;
+}
+
+.notes-box{
+  margin-bottom: 1rem;
+  margin-top: .2rem;
+  width: 80%;
+  height: 100px;
+}
+
+.entry-title{
+  font-family: 'Ysabeau SC', serif;
+  font-style: italic;
+  margin-bottom: .5rem;
+}
+
+#entry-display{
+  font-family: 'Klee One', sans-serif;
+}
+
+@media only screen and (min-width: 656px) and (max-width:1023px){
+  /*header, nav, footer*/
+.headings{
+  flex-grow:2;
+  text-align: center;
+  margin-right: 5rem;
+}
+
+.page-title{
+  font-size: 52px;
+}
+
+nav button {
+  display: none;
+}
+
+.active-link{
+  background-color: rgba(143, 161, 145, 0.2);
+}
+
+nav{
+  flex-direction: row;
+}
+
+nav li a{
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: .5rem;
+  border-radius: 8px;
+}
+
+nav li a:hover{
+  font-style: italic;
+  background-color: #48d109;
+}
+
+#main-nav{
+  border-radius: 0px;
+  max-width: 100%;
+}
+
+#primaryNav{
+  margin-bottom: .5rem;
+  margin-top: .5rem;
+  margin-right: 1rem;
+}
+nav ul#primaryNav {
+  display: flex;
+  flex-grow: 2;
+  justify-content: space-evenly; 
+}
+
+#main-footer a{
+  flex-grow: 2;
+  text-align: center;
+}
+
+#main-footer.logo{
+  padding-left: 2rem;
+}
+
+/*hero*/
+.hero{
+  max-width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 3rem;
+}
+
+.hero-text a{
+  font-size: 2rem;
+  padding-left: .5rem;
+  padding-right: .5rem;
+}
+
+.hero-text a:hover{
+  font-style: italic;
+  background-color: #48d109;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  border-radius: 80px;
+}
+
+.page-para{
+  margin-bottom: 3rem;
+  max-width: 95%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/*image slider and quote */
+.image-quote{
+  font-size: 32px;
+  max-width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/*bird-facts*/
+#bird-facts{
+  max-width: 90%;
+}
+
+/*birds list page*/
+.submitBtn{
+  padding-left: 3rem;
+  padding-right: 3rem;
+  font-size: 18px;
+  margin-top: 2rem;
+}
+}
+
+@media only screen and (min-width: 1024px) {
+  html{
+    background-color: #adc8c7;
+  }
+
+  .wrapper{
+    background-color: #fff;
+    max-width: 1200px;
+  }
+ /*header, nav, footer*/
+ header{
+  margin-left: 1rem;
+  margin-right: 1rem;
+ }
+
+ .header-wrapper{
+  background-color: #fff;
+  padding-top: 1rem;
+ }
+
+ .headings{
+  flex-grow:2;
+  text-align: center;
+  margin-right: 14.5rem;
+}
+
+.headings h1{
+  font-size: 100px;
+}
+
+.headings p{
+  font-size: 20px;
+}
+
+
+nav button {
+  display: none;
+}
+
+.active-link{
+  background-color: rgba(143, 161, 145, 0.2);
+}
+
+nav{
+  flex-direction: row;
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+nav li a{
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: .5rem;
+  border-radius: 8px;
+}
+
+nav li a:hover{
+  font-style: italic;
+  background-color: #48d109;
+}
+
+#main-nav{
+  border-radius: 0px;
+  max-width: 100%;
+}
+
+#primaryNav{
+  margin-bottom: .5rem;
+  margin-top: .5rem;
+  margin-right: 1rem;
+}
+nav ul#primaryNav {
+  display: flex;
+  flex-grow: 2;
+  justify-content: space-evenly; 
+}
+
+.footer-wrapper{
+  background-color: white;
+  padding-bottom: .1rem;
+}
+
+#main-footer{
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+#main-footer a{
+  flex-grow: 2;
+  text-align: center;
+  font-size: 32px;
+}
+
+#main-footer.logo{
+  padding-left: 2rem;
+}
+
+.page-title{
+  font-size: 52px;
+}
+
+/*grid*/
+
+.grid-wrapper{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 235px 500px 1fr;
+  column-gap: 1.5rem;
+  row-gap: 4rem;
+  margin: auto;
+  max-width: 1200px;
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+/*hero*/
+.hero{
+  grid-column: 1/4;
+  margin-right: 0;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.heropic{
+  height: 700px;
+  width: 100%;
+  
+}
+
+.hero-text a{
+  font-size: 3rem;
+  padding-left: .5rem;
+  padding-right: .5rem;
+}
+
+.hero-text a:hover{
+  font-style: italic;
+  background-color: #48d109;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  border-radius: 80px;
+}
+
+.page-para{
+  grid-column: 1/4;
+  grid-row: 2/3;
+  font-size: 28px;
+  line-height: 2.7rem;
+  margin-top: 0;
+  margin-bottom: 0;  
+  padding-left: 2rem;
+  padding-right: 2rem;
+  text-align: center;
+}
+
+/*image slider and quote */
+#image-slider{
+grid-column: 1/3;
+margin-right: 0;
+}
+
+.slider{
+  margin-left: 0;
+  margin-right: 0;
+  overflow: visible;
+  max-width: 100%;
+}
+
+.slide{
+  width: 100%;
+}
+
+.image-quote{
+  font-size: 32px;
+  line-height: 4.3rem;
+  margin-left: auto;
+  margin-right: auto;
+
+  margin-bottom: 0;
+}
+
+/*bird-facts*/
+#bird-facts{
+  grid-column: 1/4;
+  max-width: 100%;
+  margin-left: 3rem;
+  margin-right: 3rem;
+  margin-top: -3rem;
+}
+
+#bird-facts h2{
+  font-size: 42px;
+  margin-bottom: 4rem;
+  line-height: 3.5rem;
+  margin-top: 1rem;
+}
+
+#bird-facts p{
+  font-size: 30px;
+  margin-top: 2.8rem;
+}
+
+/*birds list page*/
+.submitBtn{
+  padding-left: 3rem;
+  padding-right: 3rem;
+  font-size: 18px;
+  margin-top: 2rem;
+}
+
+
+
+
+
+
+
+}

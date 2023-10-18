@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>FlapMap | Home</title>
+    <meta name="description" content="FlapMap Final Project WDD330 for Rene Olive BYU-Idaho">
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cedarville+Cursive&family=Klee+One&family=Ysabeau+SC:wght@200&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css" />
+    
+    
+  </head>
+  <body class="wrapper">
+    <div class="header-wrapper">
+      <header id="main-header"></header>
+    </div>
+    <nav id="main-nav"></nav>
+    <main>
+      <h1 class="page-title">FlapMap Home</h1>
+      <hr>
+      <div class="grid-wrapper">
+        <div class="hero">
+          <div class="hero-text"><a href="/birdsList/birdsList.html">Find Birds Now!</a></div>
+          <picture>
+              <source media="(max-width: 400px)" srcset="images/watching-200.webp">
+              <source media="(max-width: 1000px)" srcset="images/watching-500.webp">
+              <source media="(max-width: 1600px)" srcset="images/watching-800.webp">
+              <a href="/birdsList/birdsList.html" style="display: inline-block;">
+              <img class="heropic" src="images/watching-800.webp" alt="hero picture">
+              </a>
+          </picture>
+        </div>      
+        <h3 class="page-para">There is beauty all around! Get out and explore your world. Listen to the trees, the wind, and the birds! 
+          Whether you have binoculars or bifocals, view the world your way and record birds you see in our bird journal! Whatever way you do it,
+          get out and view the beauty of our world!
+        </h3>
+        <div id="image-slider"></div>
+        <p class="image-quote">"The air is crowded with birds- beautiful, tender, intelligent birds- to whom life is a song"<br> ~George Henry Lewes </p>
+        <div id="bird-facts"></div> 
+    </div>
+    </main>
+    <div class="footer-wrapper">
+      <footer id="main-footer"></footer>
+    </div>
+  </body>
+  <script src="js/main.js" type="module" defer></script>
+</html>
