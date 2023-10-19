@@ -1,18 +1,20 @@
-import { resolve } from "path";
 import { defineConfig } from "vite";
 
 export default defineConfig({
-  root: "src/",
+  base: "./", // Set the base path to the root
   build: {
-    outDir: "../dist",    
+    outDir: "dist", // Set the output directory relative to the base path
     rollupOptions: {
       input: {
-        main: resolve(__dirname, "src/index.html"),
-        birdsList: resolve(__dirname, "src/birdsList/birdsList.html"),
-        birdsJournal: resolve(__dirname, "src/birdsJournal/birdsJournal.html"),
+        main: "src/index.html",
+        birdsList: "src/birdsList/birdsList.html",
+        birdsJournal: "src/birdsJournal/birdsJournal.html",
       },
     },
   },
 });
-  
- 
+
+
+
+
+
